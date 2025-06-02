@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class Cat : MonoBehaviour , Animal
+public class Cat : MonoBehaviour, Animal
 {
-	private bool hasKnockbacked = false;
+    private bool hasKnockbacked = false;
     public GameObject angelPrefab; // 天使のプレハブ（別オブジェクト）
-	private KnockbackEffect knockback;
+    private KnockbackEffect knockback;
     private Animator animator;
     private int enemyTouchCount = 0;
     private int siroTouch = 0;
@@ -47,7 +47,7 @@ public class Cat : MonoBehaviour , Animal
         currentHP -= damage;
         Debug.Log($"{gameObject.name} は {damage} ダメージを受けた！ HP: {currentHP}");
 
-         if (!hasKnockbacked && currentHP <=  maxHP * knockbackTrigger)
+        if (!hasKnockbacked && currentHP <= maxHP * knockbackTrigger)
         {
             hasKnockbacked = true;
 
@@ -76,7 +76,7 @@ public class Cat : MonoBehaviour , Animal
             enemyTouchCount++;
         }
 
-        if (enemyTouchCount == 1|| siroTouch > 0)
+        if (enemyTouchCount == 1 || siroTouch > 0)
         {
             animator.SetBool("IsWalking", false);
             animator.SetBool("IsAttacking", true);
@@ -97,8 +97,8 @@ public class Cat : MonoBehaviour , Animal
                 isMove = true;
             }
         }
-         if (collision.gameObject.tag == "tekisiro")
-          {
+        if (collision.gameObject.tag == "tekisiro")
+        {
 
             siroTouch--;
             if (siroTouch <= 0)
@@ -135,8 +135,9 @@ public class Cat : MonoBehaviour , Animal
             Debug.Log("城にダメージを与えた！");
         }
     }
-    private void BecomeAngel () {
-	Vector3 spawnPos =  transform.position;
-  GameObject angel = Instantiate(angelPrefab, spawnPos, Quaternion.identity);
-}
+    private void BecomeAngel()
+    {
+        Vector3 spawnPos = transform.position;
+        GameObject angel = Instantiate(angelPrefab, spawnPos, Quaternion.identity);
+    }
 }
