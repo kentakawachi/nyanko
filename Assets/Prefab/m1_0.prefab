@@ -132,7 +132,7 @@ MonoBehaviour:
   attackPower: 250
   isMove: 1
   targetAnimal: {fileID: 0}
-  attackSE: {fileID: 8300000, guid: a0126db8c4d9c4686948cb7066e1708d, type: 3}
+  attackSE: {fileID: 8300000, guid: c5832e683f5ff4beeae4742488128a11, type: 3}
 --- !u!82 &2874671537397933585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -143,8 +143,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c5832e683f5ff4beeae4742488128a11, type: 3}
+  m_Resource: {fileID: 8300000, guid: c5832e683f5ff4beeae4742488128a11, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
