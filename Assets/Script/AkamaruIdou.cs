@@ -16,7 +16,7 @@ public class AkamaruIdou : MonoBehaviour
     {
         
     }
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         Vector2 pos = transform.position;
         wankoMap.MoveToStage(pos, stageName);
