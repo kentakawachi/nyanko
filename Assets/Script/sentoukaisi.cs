@@ -25,14 +25,11 @@ public class Sentoukaisi : MonoBehaviour
 
     void OnStartButtonClicked()
     {
-        // 戦闘開始画像を表示
         startImage.SetActive(true);
-        BGM.Stop(); // 音を止める
-        audioSource.Play();             // 音楽を再生
-        // 必要なら、一定時間後に非表示にしたり、次のシーンに進んだりも可能
-        // 例：3秒後に非表示にする場合
+        BGM.Stop(); 
+        audioSource.Play();             
         Invoke("HideStartImage", 3f);
-        Invoke("GoToNextScene", 3f); // 3秒後にシーン移動
+        Invoke("GoToNextScene", 3f); 
     }
 
     void HideStartImage()
